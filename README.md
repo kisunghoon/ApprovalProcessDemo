@@ -1,6 +1,6 @@
 # ApprovalProcessDemo  
 
-게시글에 대한 승인 요청 및 처리 프로세스를 구현한 Spring Boot 기반 시스템입니다.
+게시글에 대한 승인 요청 및 처리 프로세스를 구현한 Spring Boot 기반 시스템입니다.   
 Salesforce의 Approval Process에서 영감을 받아, 템플릿 기반 승인 흐름을 설계하고 다양한 승인 유형(PARALLEL / SEQUENTIAL)을 지원합니다.
 
 [ ERD ]  
@@ -27,7 +27,7 @@ Template 기반의 승인 프로세스 생성 기능
 🌀 ProcessInstance
 1. 실제 실행되는 승인 프로세스 인스턴스
 2. 게시글과 1:1 연관
-3. 승인 상태 PENDING, COMPLETED, REJECTED 관리
+3. 승인 상태 PENDING, APPROVED , REJECTED 관리
 
 🔁 ProcessInstanceNode
 1. 단계별 승인 정의
@@ -40,7 +40,8 @@ Template 기반의 승인 프로세스 생성 기능
 🕓 ProcessInstanceStep
 1. 승인 단계 완료 이력 기록
 
-📌 주요 기능
+📌 주요 기능  
+
  1. 게시글 등록 (Post)
 
  2. 게시글 수정 시 승인 상태 체크 (승인 완료 시 수정 불가 – AOP 적용)
