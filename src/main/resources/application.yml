@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: ApprovalProcessDemo
+  datasource:
+    url: jdbc:mariadb://localhost:3306/approvalprocess
+    username: root
+    password: zerobase
+    driver-class-name: org.mariadb.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
